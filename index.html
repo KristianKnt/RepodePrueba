@@ -1,13 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Esta es una descripción detallada de mi sitio web para mejorar el posicionamiento en SEO.">
+    <meta name="keywords" content="HTML5, Estructura, Web, Semántica, Plantilla">
+    <meta name="author" content="Tu Nombre o Empresa">
+    <title>Estructura HTML5 Detallada y Semántica</title>
+    
+    <!-- Estilos CSS Internos para presentación -->
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --text-color: #333;
+            --bg-color: #f4f4f9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background: #34495e;
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            display: block;
+        }
+
+        nav a:hover {
+            background-color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        }
+
+        main {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        article {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1.5rem;
+        }
+
+        aside {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            height: fit-content;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hola kevin</h1>
-    <h2>Buenas buenas</h2>
-    
+
+    <!-- Encabezado principal de la página -->
+    <header>
+        <h1>Mi Sitio Web Profesional</h1>
+        <p>Una estructura limpia, accesible y optimizada</p>
+    </header>
+
+    <!-- Barra de navegación principal -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#articulos">Blog</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenedor principal de contenido -->
+    <div class="container">
+        
+        <!-- Contenido principal (SEO friendly) -->
+        <main id="inicio">
+            <section id="articulos">
+                <h2>Artículos Destacados</h2>
+                
+                <!-- Artículo 1 -->
+                <article>
+                    <h3>Cómo dominar el desarrollo web en 2026</h3>
+                    <p><small>Publicado el 2 de octubre de 2026 por Juan Pérez</small></p>
+                    <p>El desarrollo web ha evolucionado hacia la semántica pura y la optimización de rendimiento. Usar etiquetas correctas ayuda a los motores de búsqueda a entender tu contenido.</p>
+                    <a href="#" style="color: var(--primary-color);">Leer más...</a>
+                </article>
+
+                <!-- Artículo 2 -->
+                <article>
+                    <h3>La importancia del diseño responsivo</h3>
+                    <p><small>Publicado el 25 de septiembre de 2026 por María Gómez</small></p>
+                    <p>Hoy en día, más del 60% del tráfico web proviene de dispositivos móviles. Tu sitio debe adaptarse perfectamente a cualquier tamaño de pantalla.</p>
+                </article>
+            </section>
+
+            <!-- Sección de Formulario de Contacto -->
+            <section id="contacto">
+                <h2>Formulario de Contacto</h2>
+                <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div>
+                        <label for="nombre">Nombre Completo:</label><br>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required style="width: 100%; padding: 0.5rem;">
+                    </div>
+                    <div>
+                        <label for="correo">Correo Electrónico:</label><br>
+                        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required style="width: 100%; padding: 0.5rem;">
+                    </div>
+                    <div>
+                        <label for="mensaje">Mensaje:</label><br>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required style="width: 100%; padding: 0.5rem;"></textarea>
+                    </div>
+                    <button type="submit" style="background: var(--primary-color); color: white; padding: 0.7rem; border: none; border-radius: 4px; cursor: pointer;">Enviar Mensaje</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Barra lateral informativa -->
+        <aside id="servicios">
+            <h3>Sobre Mí</h3>
+            <p>Soy un desarrollador enfocado en crear interfaces limpias, rápidas y accesibles para todo tipo de usuarios.</p>
+            
+            <h3>Enlaces de Interés</h3>
+            <ul>
+                <li><a href="#" style="color: var(--text-color);">Documentación MDN</a></li>
+                <li><a href="#" style="color: var(--text-color);">Validación W3C</a></li>
+                <li><a href="#" style="color: var(--text-color);">Proyectos GitHub</a></li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 Mi Sitio Web. Todos los derechos reservados.</p>
+        <p><small>Diseñado con fines educativos y profesionales.</small></p>
+    </footer>
+
 </body>
 </html>
